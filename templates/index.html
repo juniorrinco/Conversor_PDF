@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de PDF para Excel</title>
+    <link rel="icon" type="image/png" href="/static/images/icon.jpg">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="container mt-1">
+                <img src="/static/images/converter (3).png" alt="Ícone da Pagina" class="title-icon">
+                Conversor de PDF para Excel
+            </h1>
+        </div>
+        <form action="/converter" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="files">Selecione o(s) arquivo(s) PDF para conversão:</label>
+                <input type="file" class="form-control-file" id="files" name="files[]" multiple required accept=".pdf">
+            </div>
+            <div class="form-group">
+                <label for="conversion">Escolha o tipo de conversão:</label>
+                <select class="form-control custom-width" id="conversion" name="conversion">
+                    <option value="single">Converter para um único arquivo Excel</option>
+                    <option value="multiple">Converter e baixar cada arquivo individualmente</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Converter</button>
+        </form>
+        <footer class="footer">
+            <p>&copy; 2024 Osmar Rinco Júnior. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

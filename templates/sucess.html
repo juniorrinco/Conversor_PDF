@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucesso</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h1 class="text-center mt-5">Conversão Concluída</h1>
+                {% if filenames %}
+                <p>Os seguintes arquivos foram convertidos com sucesso:</p>
+                <ul>
+                    {% for filename in filenames %}
+                    <li>
+                        {{ filename }}
+                        <a href="{{ url_for('download', filename=filename) }}" class="btn btn-primary">Baixar</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p>A conversão foi concluída com sucesso.</p>
+                {% endif %}
+                <a href="/" class="btn btn-secondary mt-3">Voltar à página inicial</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

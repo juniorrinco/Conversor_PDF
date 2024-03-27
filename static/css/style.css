@@ -1,0 +1,13 @@
+.container .form-group .custom-width {
+    max-width: 160px;
+}
+
+.custom-width {
+    max-width: 160px !important;
+}
+
+/* styles.css */
+#conversion {
+    width: 160px !important;
+
+}
