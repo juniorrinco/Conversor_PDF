@@ -1,5 +1,3 @@
-from flask import Flask, render_template, request, redirect, url_for, send_file
-from werkzeug.utils import secure_filename
-import os
-import tabula
-import pandas as pd
+Flask==2.0.2
+tabula-py==2.3.0
+pandas==1.3.3
